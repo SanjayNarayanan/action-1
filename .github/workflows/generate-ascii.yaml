@@ -1,4 +1,4 @@
-name: Generate ASCII Artwork
+name: ASCII cow Workflow
 
 on: push
 
@@ -13,13 +13,13 @@ jobs:
         run: sudo apt-get install -y cowsay
 
       - name: Execute Cowsay CMD
-        run: cowsay -f rabbit "Run for cover, I am a rabbit....RAWR" >> rabbit.txt
+        run: cowsay -f cow "Run for cover, I am a cow....RAWR" >> cow.txt
 
       - name: Test File Exists
-        run: grep -i "rabbit" rabbit.txt
+        run: grep -i "cow" cow.txt
 
       - name: Read File
-        run: cat rabbit.txt
+        run: cat cow.txt
 
       - name: List Repo Files
         run: ls -ltra
