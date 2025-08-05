@@ -13,7 +13,10 @@ jobs:
         run: ls -ltra
 
       - name: Executing shell script
-        run: .github/workflows/ascii-script.sh
+        run: |
+           chomod +x .github/workflows/ascii-script.sh
+
+           .github/workflows/ascii-script.sh
 
       # - name: List files
       #   run: ls
